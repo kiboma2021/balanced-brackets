@@ -37,7 +37,12 @@ function isBalanced(str) {
       }
     }
   }
-  return true;
+  
+  if(mystack.length!=0) {
+    return false
+  } else {
+    return true;
+  }
 }
 
 //True cases
