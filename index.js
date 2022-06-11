@@ -16,4 +16,13 @@ function isBalanced(str) {
 }
 
 //True cases
-console.log("(((Hey hell no)))")
+console.log("True cases")
+console.log(isBalanced("(((Hey hell no)))"));
+console.log(isBalanced("(([fghjkl]))"));
+console.log(isBalanced("(()ddddd)"));
+
+//True cases
+console.log("False cases")
+console.log(isBalanced("((Hey hell no)))"));
+console.log(isBalanced("()[fghjkl]())"));
+console.log(isBalanced("())ddddd)"));
