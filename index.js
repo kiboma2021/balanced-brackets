@@ -9,7 +9,7 @@ function isBalanced(str) {
         if(mystack.length==0){
           return false;
         } else {
-          if(mystack.charAt(mystack.length-1)!='(') {
+          if(mystack[mystack.length-1]!='(') {
             return false;
           } else {
             mystack.pop()
@@ -19,7 +19,7 @@ function isBalanced(str) {
       if(mystack.length==0){
         return false;
       } else {
-        if(mystack.charAt(mystack.length-1)!='[') {
+        if(mystack[mystack.length-1]!='[') {
           return false;
         } else {
           mystack.pop()
@@ -29,7 +29,7 @@ function isBalanced(str) {
       if(mystack.length==0){
         return false;
       } else {
-        if(mystack.charAt(mystack.length-1)!='{') {
+        if(mystack[mystack.length-1]!='{') {
           return false;
         } else {
           mystack.pop()
