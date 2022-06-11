@@ -44,7 +44,7 @@ function isBalanced(str) {
 console.log("True cases")
 console.log(isBalanced("(((Hey hell no)))"));
 console.log(isBalanced("(([fghjkl]))"));
-console.log(isBalanced("(()ddddd)"));
+console.log(isBalanced("Annita:(({[]}))"));
 
 //True cases
 console.log("False cases")
