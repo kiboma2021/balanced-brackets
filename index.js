@@ -2,13 +2,38 @@ function isBalanced(str) {
   let mystack=[];
 
   for(let i=0;i<str.length;i++) {
-    if(str.charAt(i)=='(' || str.charAt(i)=='[' || str.charAt(i)=='{') {
+    if(str.charAt(i)=='(' || str.charAt(i)=='[' || str.charAt(i)=='{') 
+    {
       mystack.push(str.charAt(i));
-    } else if (str.charAt(i)==')' || str.charAt(i)==']' || str.charAt(i)=='}') {
+      } else if (str.charAt(i)==')') {
+        if(mystack.length==0){
+          return false;
+        } else {
+          if(mystack.charAt(mystack.length-1)!='(') {
+            return false;
+          } else {
+            mystack.pop()
+          }
+        }
+      } else if (str.charAt(i)==']') {
       if(mystack.length==0){
         return false;
       } else {
-        mystack.pop()
+        if(mystack.charAt(mystack.length-1)!='[') {
+          return false;
+        } else {
+          mystack.pop()
+        }
+      }
+      } else if (str.charAt(i)=='}') {
+      if(mystack.length==0){
+        return false;
+      } else {
+        if(mystack.charAt(mystack.length-1)!='{') {
+          return false;
+        } else {
+          mystack.pop()
+        }
       }
     }
   }
